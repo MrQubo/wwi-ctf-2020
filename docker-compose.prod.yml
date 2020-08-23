@@ -1,4 +1,4 @@
-version: '3'
+version: '3.4'
 
 
 services:
@@ -6,6 +6,12 @@ services:
   nginx:
     restart: always
     image: nginx:1.17
+    healthcheck:
+      test: ["CMD", "curl", "-f", "https://ctf.staszic.waw.pl"]
+      interval: 2m
+      timeout: 6s
+      retries: 3
+      start_period: 10s
     depends_on:
       - ctfd
     hostname: ctf.staszic.waw.pl
