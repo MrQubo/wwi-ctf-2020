@@ -1,2 +1,8 @@
 # CTFd worktree
 /CTFd/
+
+# Docker volumes as configured in docker-compose.yml.
+/docker-volumes/
+
+# Production ssl certs.
+/ssl/
