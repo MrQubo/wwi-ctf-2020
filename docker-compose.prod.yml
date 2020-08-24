@@ -22,7 +22,7 @@ services:
       - 94.240.45.212:443:8443
     networks:
       - default
-      - nginx
+      - proxy
 
   ctfd_db:
     environment:
@@ -46,7 +46,7 @@ services:
       - 8000
     ports: []
     networks:
-      - nginx
+      - proxy
       - ctfd_db
       - ctfd_cache
 
@@ -62,5 +62,5 @@ services:
 
 
 networks:
-  nginx:
+  proxy:
     internal: true
