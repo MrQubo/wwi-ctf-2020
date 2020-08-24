@@ -11,7 +11,6 @@ services:
       interval: 2m
       timeout: 6s
       retries: 3
-      start_period: 10s
     command: sh -c "apk add --no-cache curl && nginx -g 'daemon off;'"
     depends_on:
       - ctfd
@@ -61,7 +60,6 @@ services:
       interval: 10m
       timeout: 10s
       retries: 3
-      start_period: 1s
     command: ['tail', '-f']
 
 
