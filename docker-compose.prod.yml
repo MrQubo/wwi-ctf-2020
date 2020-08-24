@@ -52,6 +52,16 @@ services:
       - ctfd_db
       - ctfd_cache
 
+  text_flag:
+    restart: always
+    build: ./tasks/text-flag/
+    healthcheck:
+      test: ["CMD", "/healthcheck"]
+      interval: 10m
+      timeout: 10s
+      retries: 3
+    command: ['tail', '-f']
+
 
 networks:
   nginx:

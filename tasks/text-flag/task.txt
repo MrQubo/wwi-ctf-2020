@@ -1,0 +1,5 @@
+Name: text flag
+Category: medium
+Tags: dns
+
+There's something fishy with the DNS for ctf.staszic.waw.pl.
