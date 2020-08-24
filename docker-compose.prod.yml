@@ -7,7 +7,7 @@ services:
     restart: always
     build: ./nginx/
     healthcheck:
-      test: CMD /healthcheck
+      test: [CMD, /healthcheck]
       interval: 2m
       timeout: 6s
       retries: 3
@@ -53,7 +53,7 @@ services:
     restart: always
     build: ./tasks/text-flag/
     healthcheck:
-      test: CMD /healthcheck
+      test: [CMD, /healthcheck]
       interval: 10m
       timeout: 10s
       retries: 3
