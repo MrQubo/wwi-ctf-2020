@@ -5,4 +5,4 @@
 /docker-volumes/
 
 # Production ssl certs.
-/ssl/
+/nginx/ssl/
