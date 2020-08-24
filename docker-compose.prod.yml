@@ -15,7 +15,6 @@ services:
       - ctfd
     hostname: ctf.staszic.waw.pl
     volumes:
-      - ./ssl:/etc/ssl:ro
       - ./docker-volumes/nginx/logs:/var/log
     ports:
       - 94.240.45.212:80:8000
