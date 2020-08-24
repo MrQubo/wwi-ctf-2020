@@ -5,7 +5,7 @@ services:
 
   nginx:
     restart: always
-    image: nginx:1.17-alpine
+    image: nginx:1.19.2-alpine
     healthcheck:
       test: ["CMD", "curl", "-f", "https://ctf.staszic.waw.pl"]
       interval: 2m
