@@ -7,7 +7,7 @@ services:
     restart: always
     image: nginx:1.19.2-alpine
     healthcheck:
-      test: ["CMD", "curl", "-f", "https://ctf.staszic.waw.pl"]
+      test: CMD curl -f https://ctf.staszic.waw.pl/
       interval: 2m
       timeout: 6s
       retries: 3
@@ -56,11 +56,11 @@ services:
     restart: always
     build: ./tasks/text-flag/
     healthcheck:
-      test: ["CMD", "/healthcheck"]
+      test: CMD /healthcheck
       interval: 10m
       timeout: 10s
       retries: 3
-    command: ['tail', '-f']
+    command: tail -f
 
 
 networks:
