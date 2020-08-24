@@ -28,22 +28,12 @@ services:
       - MYSQL_ROOT_PASSWORD=BrDHwg3uyemzeq2cYT4FT1PrJrdfajNg
       - MYSQL_USER=igtGLLwstfLo62jgcpxcj0Yc1gcXWFhr
       - MYSQL_PASSWORD=tONTlJQQr9GqClr3ouikNdpKDIxvqhyI
-      - MYSQL_DATABASE=ctfd
 
   ctfd:
     environment:
       - DATABASE_URL=mysql+pymysql://igtGLLwstfLo62jgcpxcj0Yc1gcXWFhr:tONTlJQQr9GqClr3ouikNdpKDIxvqhyI@ctfd_db:3306/ctfd
-      - REDIS_URL=redis://ctfd_cache:6379
-      - WORKERS=1
-      - UPLOAD_FOLDER=/var/uploads
-      - LOG_FOLDER=/var/log/CTFd
-      - ACCESS_LOG=/var/log/gunicorn.access.log
-      - ERROR_LOG=/var/log/gunicorn.error.log
-      - USE_SSL=false
-      - REVERSE_PROXY=true
     expose:
       - 8000
-    ports: []
     networks:
       - proxy
       - ctfd_db
