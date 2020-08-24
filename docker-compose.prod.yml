@@ -57,7 +57,7 @@ services:
       interval: 10m
       timeout: 10s
       retries: 3
-    command: tail -f
+    command: [tail, -f]
 
 
 networks:
