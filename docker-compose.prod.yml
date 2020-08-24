@@ -7,7 +7,7 @@ services:
     restart: always
     image: nginx:1.19.2-alpine
     healthcheck:
-      test: CMD curl -f https://ctf.staszic.waw.pl/ || exit 1
+      test: CMD curl -f http://ctf.staszic.waw.pl:8000/ || exit 1
       interval: 2m
       timeout: 6s
       retries: 3
