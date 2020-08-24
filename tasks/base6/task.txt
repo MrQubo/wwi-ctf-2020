@@ -1,0 +1,9 @@
+Name: base6
+Category: hard
+Tags: crypto, base64
+
+I've found this encoded text from the last year WWI.
+
+This task requires understanding how base64 works.
+
+Authors: Jakub Wasilewski – Idea, MrQubo – Implementation
