@@ -49,6 +49,10 @@ services:
       retries: 3
     command: [tail, -f]
 
+  confucius:
+    ports:
+      - 94.240.45.212:1337:1330
+
 
 networks:
   proxy:

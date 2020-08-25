@@ -60,6 +60,14 @@ services:
       - ctfd_db
       - ctfd_cache
 
+  confucius:
+    restart: always
+    build: ./tasks/confucius-tradition-1/
+    ports:
+      - 127.0.0.1:1337:1330
+    networks:
+      - default
+
 
 networks:
   default:
