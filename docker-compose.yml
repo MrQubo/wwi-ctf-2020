@@ -3,6 +3,13 @@ version: '3.4'
 
 services:
 
+  # It's not meant to be started. Used as a base image for some tasks.
+  nsjail:
+    restart: no
+    build: ./nsjail/
+    command: ['/bin/false']
+    networks: []
+
   ctfd_db:
     restart: always
     image: mariadb:10.4.12
