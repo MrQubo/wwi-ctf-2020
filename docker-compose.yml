@@ -5,7 +5,7 @@ services:
 
   # It's not meant to be started. Used as a base image for some tasks.
   nsjail:
-    restart: no
+    restart: 'no'
     build: ./nsjail/
     command: ['/bin/false']
     networks: []
@@ -72,6 +72,15 @@ services:
     build: ./tasks/confucius-tradition-1/
     ports:
       - 127.0.0.1:1337:1330
+    networks:
+      - default
+
+  editor:
+    restart: always
+    build: ./tasks/editor/
+    privileged: true
+    ports:
+      - 127.0.0.1:1338:9000
     networks:
       - default
 

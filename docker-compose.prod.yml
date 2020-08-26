@@ -53,6 +53,10 @@ services:
     ports:
       - 94.240.45.212:1337:1330
 
+  editor:
+    ports:
+      - 94.240.45.212:1338:9000
+
 
 networks:
   proxy:
