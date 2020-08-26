@@ -1,0 +1,7 @@
+Name: Confucius Tradition 2
+Category: hard
+Tags: crypto, pwn, crt
+
+The last system was vulnerable, that's why I increased the number of conditions. This labourious process was hard, I think I might have done some slipped some number...
+
+Author: enedil
