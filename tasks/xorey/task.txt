@@ -1,0 +1,7 @@
+Name: Xorey
+Category: easy
+Tags: crypto, xor
+
+What's this weird magic number, 50, it's not even a power of two.
+
+Author: enedil
