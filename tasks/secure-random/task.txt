@@ -1,0 +1,9 @@
+Name: Secure Random
+Category: medium
+Tags: crypto, probability
+
+I made this weird stream cipher and it looks really cute!
+
+Note: the libsodium library works correct, no need to check that.
+
+Author: enedil
