@@ -1,0 +1,7 @@
+Name: Little Fierceful Sturdy Regime
+Category: medium
+Tags: crypto, lsfr
+
+What is this, a partialy known-plaintext attack?
+
+Author: enedil
