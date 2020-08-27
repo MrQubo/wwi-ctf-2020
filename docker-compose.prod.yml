@@ -65,6 +65,10 @@ services:
     ports:
       - 94.240.45.212:1340:9000
 
+  fast-and-furious:
+    ports:
+      - 94.240.45.212:1341:8000
+
 
 networks:
   proxy:

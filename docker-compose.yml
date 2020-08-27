@@ -93,6 +93,14 @@ services:
     networks:
       - default
 
+  fast-and-furious:
+    restart: always
+    build: ./tasks/fast-and-furious/
+    ports:
+      - 127.0.0.1:1341:8000
+    networks:
+      - default
+
 
 networks:
   default:
