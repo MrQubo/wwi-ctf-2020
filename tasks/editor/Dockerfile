@@ -8,8 +8,8 @@ COPY flag.txt /home/app/flag.aGeRUNWussqW5V6B4QzjoOo3wcLbeuCB.txt
 COPY nsjail.sh /opt/
 
 RUN \
-	ln -s / /home/app/flag-but-no-flag &&\
-	ln -s /usr/bin/vim.tiny /usr/bin/vim &&\
+	ln -sT / /home/app/flag-but-no-flag &&\
+	ln -sT /usr/bin/vim.tiny /usr/bin/vim &&\
 	addgroup --gid 1001 app &&\
 	useradd --no-create-home --uid 1001 --gid app --shell /bin/false app &&\
 	chown -R root:app /home/app/ &&\
