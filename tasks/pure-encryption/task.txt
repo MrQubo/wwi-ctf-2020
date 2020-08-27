@@ -4,4 +4,6 @@ Tags: crypto, stegano
 
 I used some really hard crypto there and I'm sure nobody will manage to break it. It's so good it doesn't even use a key!
 
+Hint: try to discover what is this file.
+
 Author: enedil

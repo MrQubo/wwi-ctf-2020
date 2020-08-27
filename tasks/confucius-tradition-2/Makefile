@@ -1,3 +1,3 @@
-CXXFLAGS = -std=c++17 -g
+CXXFLAGS = -std=c++17
 all:
-	g++ $(CXXFLAGS) confucius.cpp -lgmp 
+	g++ $(CXXFLAGS) confucius.cpp -lgmp

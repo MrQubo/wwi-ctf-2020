@@ -65,7 +65,7 @@ fn encrypt_data(key17: u32, key25: u32, data: &Bytes) -> Bytes {
 
 fn main() {
     let flag = Bytes::from(fs::read_to_string("flag.txt")
-        .expect("Coś się nie udało"));
+        .expect("Coś się nie udało (nie masz flagi na dysku?)"));
     let data = b"oto flaga, prosze czytac: "[..].chain(flag).to_bytes();
     let key17: u32 = rand::random::<u32>() & 0x001ffff;
     let key25: u32 = rand::random::<u32>() & 0x1ffffff;
