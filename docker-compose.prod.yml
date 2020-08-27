@@ -23,7 +23,7 @@ services:
       - default
       - proxy
 
-  ctfd_db:
+  ctfd-db:
     environment:
       - MYSQL_ROOT_PASSWORD=BrDHwg3uyemzeq2cYT4FT1PrJrdfajNg
       - MYSQL_USER=igtGLLwstfLo62jgcpxcj0Yc1gcXWFhr
@@ -31,15 +31,15 @@ services:
 
   ctfd:
     environment:
-      - DATABASE_URL=mysql+pymysql://igtGLLwstfLo62jgcpxcj0Yc1gcXWFhr:tONTlJQQr9GqClr3ouikNdpKDIxvqhyI@ctfd_db:3306/ctfd
+      - DATABASE_URL=mysql+pymysql://igtGLLwstfLo62jgcpxcj0Yc1gcXWFhr:tONTlJQQr9GqClr3ouikNdpKDIxvqhyI@ctfd-db:3306/ctfd
     expose:
       - 8000
     networks:
       - proxy
-      - ctfd_db
-      - ctfd_cache
+      - ctfd-db
+      - ctfd-cache
 
-  text_flag:
+  text-flag:
     restart: always
     build: ./tasks/text-flag/
     healthcheck:

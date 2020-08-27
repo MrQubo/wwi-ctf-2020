@@ -3,7 +3,7 @@ version: '3.4'
 
 services:
 
-  ctfd_db:
+  ctfd-db:
     restart: always
     image: mariadb:10.4.12
     # This command is required to set important mariadb defaults
@@ -14,34 +14,34 @@ services:
       - MYSQL_PASSWORD=ctfd
       - MYSQL_DATABASE=ctfd
     volumes:
-      - ./docker-volumes/ctfd_db/logs:/var/log
-      - ./docker-volumes/ctfd_db/mysql:/var/lib/mysql
+      - ./docker-volumes/ctfd-db/logs:/var/log
+      - ./docker-volumes/ctfd-db/mysql:/var/lib/mysql
     expose:
       - 3306
     networks:
-      - ctfd_db
+      - ctfd-db
 
-  ctfd_cache:
+  ctfd-cache:
     restart: always
     image: redis:4
     volumes:
-      - ./docker-volumes/ctfd_cache/logs:/var/log
-      - ./docker-volumes/ctfd_cache/data:/data
+      - ./docker-volumes/ctfd-cache/logs:/var/log
+      - ./docker-volumes/ctfd-cache/data:/data
     expose:
       - 6379
     networks:
-      - ctfd_cache
+      - ctfd-cache
 
   ctfd:
     restart: always
     build: ./CTFd/
     depends_on:
-      - ctfd_db
-      - ctfd_cache
+      - ctfd-db
+      - ctfd-cache
     user: root
     environment:
-      - DATABASE_URL=mysql+pymysql://ctfd:ctfd@ctfd_db:3306/ctfd
-      - REDIS_URL=redis://ctfd_cache:6379
+      - DATABASE_URL=mysql+pymysql://ctfd:ctfd@ctfd-db:3306/ctfd
+      - REDIS_URL=redis://ctfd-cache:6379
       - WORKERS=1
       - UPLOAD_FOLDER=/var/uploads
       - LOG_FOLDER=/var/log/CTFd
@@ -57,8 +57,8 @@ services:
       - 127.0.0.1:8000:8000
     networks:
       - default
-      - ctfd_db
-      - ctfd_cache
+      - ctfd-db
+      - ctfd-cache
 
   confucius:
     restart: always
@@ -96,7 +96,7 @@ services:
 
 networks:
   default:
-  ctfd_db:
+  ctfd-db:
     internal: true
-  ctfd_cache:
+  ctfd-cache:
     internal: true
