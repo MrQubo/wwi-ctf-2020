@@ -1,6 +1,6 @@
 Name: Little Fierceful Sturdy Regime
 Category: medium
-Tags: crypto, lsfr
+Tags: crypto, lfsr
 
 What is this, a partialy known-plaintext attack?
 
