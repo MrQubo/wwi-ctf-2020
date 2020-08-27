@@ -12,7 +12,7 @@ declare -ra args=(
 	-R /bin -R /usr -R /lib -R /lib64
 	-R /home/app
 	--time_limit 0
-	--cgroup_cpu_ms_per_sec 32
+	--cgroup_cpu_ms_per_sec 2000
 	--cgroup_mem_max "$((2 * 1024 * 1024))"
 	--cgroup_pids_max 4
 	-- "$@"
