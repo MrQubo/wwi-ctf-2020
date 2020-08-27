@@ -77,6 +77,7 @@ uint8_t magic2[] = {
 };
 
 int main() {
+    std::cout << "Enter password: ";
     std::string password;
     std::cin >> password;
     mpz_class input(password);
