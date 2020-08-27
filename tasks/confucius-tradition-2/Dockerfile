@@ -21,4 +21,5 @@ RUN apk add --no-cache \
 COPY flag.txt /opt/
 COPY --from=builder /opt/confucius /opt/
 
+WORKDIR /opt/
 ENTRYPOINT ["socat", "tcp4-listen:1330,fork,reuseaddr,nodelay,keepalive,keepidle=1,keepintvl=1,keepcnt=1", "exec:/opt/confucius,pty,ctty"]
