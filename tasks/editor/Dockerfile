@@ -11,7 +11,7 @@ RUN \
 	ln -sT / /home/app/flag-but-no-flag &&\
 	ln -sT /usr/bin/vim.tiny /usr/bin/vim &&\
 	addgroup --gid 1001 app &&\
-	useradd --no-create-home --uid 1001 --gid app --shell /bin/false app &&\
+	useradd --uid 1001 --gid app --shell /bin/false app &&\
 	chown -R root:app /home/app/ &&\
 	chmod 0555 /home &&\
 	chmod 0550 /home/app &&\
