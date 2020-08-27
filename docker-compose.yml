@@ -75,6 +75,22 @@ services:
     networks:
       - default
 
+  confucius2:
+    restart: always
+    build: ./tasks/confucius-tradition-2/
+    ports:
+      - 127.0.0.1:1339:1330
+    networks:
+      - default
+
+  secure-random:
+    restart: always
+    build: ./tasks/secure-random/
+    ports:
+      - 127.0.0.1:1340:1330
+    networks:
+      - default
+
   editor:
     restart: always
     build: ./tasks/editor/
