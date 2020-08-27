@@ -72,7 +72,7 @@ services:
     restart: always
     build: ./tasks/confucius-tradition-2/
     ports:
-      - 127.0.0.1:1339:1330
+      - 127.0.0.1:1338:1330
     networks:
       - default
 
@@ -80,7 +80,7 @@ services:
     restart: always
     build: ./tasks/secure-random/
     ports:
-      - 127.0.0.1:1340:1330
+      - 127.0.0.1:1339:1330
     networks:
       - default
 
@@ -89,7 +89,7 @@ services:
     build: ./tasks/editor/
     privileged: true
     ports:
-      - 127.0.0.1:1338:9000
+      - 127.0.0.1:1340:9000
     networks:
       - default
 
