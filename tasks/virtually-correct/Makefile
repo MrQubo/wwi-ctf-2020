@@ -1,2 +1,2 @@
-CXXFLAGS = -s
+CXXFLAGS = -s -no-pie
 main: main.cpp
