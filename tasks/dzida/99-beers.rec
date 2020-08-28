@@ -1,0 +1,99 @@
+ Main function
+$###################################################v
+>i1n{4An{3Ab................vv.....................<#
+#............................>p6n{2S!fpqbw[{v.......#
+#v..........................................<.......#
+#.....>ffp_pp6n{2S!wwwww+!!p>pp_pp5n{4A!+!wwwwwppp_^#
+#.>{1S@ffppp6n{2S!wwwww+!!ppppp5n{4A!+!wwwwwppp....^#
+#>@ffp_pp6n{2S!wwwww+!!ppp_pp5n{4A!+!wwwwwppp_p6n{2v#
+#vA4{n1'S1{m}3{A7','S5'S1{m}3{A7','An5'S1{nA1{8!+!S<#
+#>S'3S','7A{3}m{2S'1A'5S'3A'2n{3SS'2}d{6S','3}m{2A'v#
+#v'A3'A2'S2{m}3{A5','S8'S2'S4'S2{m}3{A7','A4'A3{An2<#
+#>2n{3SS'2}d{6S'[+!www1n{4An{3Abpp_pp6n{2S!........#<
+$###################################################^
+
+ Print number of bottles (Only left to right)
+b###########################v
+#...............>6nA{!]{1n{v#
+>{}}0{]{1n{2A}d{@[]{vv{r}A2<#
+#v1{An4!{{S2{nA2{8[@<.......#
+#>A{!#.............>.>6nA{!#<
+b###########################^
+
+ Quaff one  (Only left to right)
+q##########v
+>>wwwwwv.<#<
+#>#....>[@v#
+#^......S1<#
+q##########^
+
+ Initiate tape (Only left to right)
+i####################################v
+>0}+}6n{4S*7nA*1n{2AA*7A*6S*3A*2n{1Av#
+#v[*S2{m}3{A7*,*SA3{n1*S1{m}3{A7*,*S<#
+#>*2n{2AS*2n{1SA*,*1n{4AA*2}d{5}m*1nv#
+#vA1*A1{An1*A5{m}3*,*S3{Sn1*Sn1*A1{A<#
+#>*,*3}m{5A*6A*1n{2AS*2n{3SS*+}0}2n{v#
+#vA3*A5{m}3*,*AS2{n3*SA3{n1*[*A4{nS3<#
+#>*1n{4AA*,*5A{3}m{1S*1A*,*0}2n{2Sn{v#
+#v0*,*A1{An1*A6{m}3*,*S3*[*SS3{n2*A2<#
+#>}2n{3Sn{3S*7A*1nA*[*5S*2n{3SS*,*0}#<
+i####################################^
+
+ Play (Only left to right)
+p#####v
+>v{!<#<
+#>.]@{#
+p#####^
+
+ Forward (Only left to right)
+f####v
+>v{<#<
+#>]@{#
+f####^
+
+ Rewind (Only left to right)
+w####v
+>v}<#<
+#>[@}#
+w####^
+
+ Multiply by 8 (Bidirectional)
+n####v#####
+>{8}m#m}8{<
+n####^#####
+
+ Add (Bidirectional)
+A##v###
+>}a#a}<
+A##^###
+
+ Subtract (Bidirectional)
+S##v###
+>}s#s}<
+S##^###
+
+ Space (Bidirectional)
+,###v####
+>[4n#n4[<
+,###^####
+
+ Print 's' (Bidirectional)
+_##########v###########
+>2n{2Sn{3A!#!A3{nS2{n2<
+_##########^###########
+
+ Line Feed (Bidirectional)
++#####v######
+>1n{2A#A2{n1<
++#####^######
+
+ Push on left stack and print (Bidirectional)
+'##v###
+>{!#!{<
+'##^###
+
+ Push on both stacks (Bidirectional)
+*##v###
+>}{#}{<
+*##^###

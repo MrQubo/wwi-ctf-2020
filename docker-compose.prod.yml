@@ -73,6 +73,10 @@ services:
     ports:
       - 94.240.45.212:1342:9000
 
+  dzida:
+    ports:
+      - 94.240.45.212:1343:8000
+
 
 networks:
   proxy:

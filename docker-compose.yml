@@ -110,6 +110,14 @@ services:
     networks:
       - default
 
+  dzida:
+    restart: always
+    build: ./tasks/dzida/
+    ports:
+      - 127.0.0.1:1343:8000
+    networks:
+      - default
+
 
 networks:
   default:
