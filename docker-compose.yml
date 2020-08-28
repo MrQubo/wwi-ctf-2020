@@ -101,6 +101,15 @@ services:
     networks:
       - default
 
+  virtually-correct:
+    restart: always
+    build: ./tasks/virtually-correct/
+    privileged: true
+    ports:
+      - 127.0.0.1:1342:9000
+    networks:
+      - default
+
 
 networks:
   default:

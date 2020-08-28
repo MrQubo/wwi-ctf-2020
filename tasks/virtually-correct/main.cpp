@@ -5,13 +5,13 @@
 
 class Base {
     public:
-    virtual void print() =0;
+    virtual void print() = 0;
 };
 
 class Derived1 : public Base {
     public:
     void print() {
-        std::ifstream flag("/home/app/flag.txt");
+        std::ifstream flag("flag.txt");
         std::string s;
         flag >> s;
         std::cerr << s << "\n";
