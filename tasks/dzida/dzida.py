@@ -38,7 +38,7 @@ def calc_solution(num):
         write_name_h(n, k)
         out.write(' i zadzidzia ')
         write_name_h(n, k)
-        out.write('.\n')
+        out.write('. ')
 
     for n in range(num):
         for k in range(3**n):
