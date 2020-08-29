@@ -10,8 +10,26 @@ import "bufio"
 
 
 
+func handle (conn net.Conn) {
 
-func main() {
+
+
+  // will listen for message to process ending in newline (\n)
+
+  message, _ := bufio.NewReader(conn).ReadString('\n')
+
+  // output message received
+
+  if message == "74uekFFoluaAMyvANtwc3sKnnoloMV\n" {
+    conn.Write([]byte("CTF{n0t-S0-s3CR3t-K3Y}\n"))
+  }
+
+  conn.Close()
+
+}
+
+
+func main () {
 
 
 
@@ -25,25 +43,20 @@ func main() {
 
 
 
-  // accept connection on port
-
-  conn, _ := ln.Accept()
-
-
-
   // run loop forever (or until ctrl-c)
 
   for {
 
-    // will listen for message to process ending in newline (\n)
 
-    message, _ := bufio.NewReader(conn).ReadString('\n')
+    // accept connection on port
 
-    // output message received
-
-    if message == "74uekFFoluaAMyvANtwc3sKnnoloMV\n" {
-      conn.Write([]byte("CTF{n0t-S0-s3CR3t-K3Y}\n"))
+    conn, err := ln.Accept()
+    if err != nil {
+      fmt.Println(err)
+      continue
     }
+
+    go handle(conn)
 
   }
 
