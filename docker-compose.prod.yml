@@ -77,6 +77,10 @@ services:
     ports:
       - 94.240.45.212:1343:8000
 
+  interceptor:
+    ports:
+      - 94.240.45.212:43958:8000
+
 
 networks:
   proxy:
