@@ -39,7 +39,7 @@ class ThreadedTCPRequestHandler(socketserver.StreamRequestHandler):
                     return
                 else:
                     self.request.sendall(b'OK!\n')
-            self.request.sendall(bytes(FLAG))
+            self.request.sendall(bytes(FLAG, 'ascii'))
         except Exception:
             import traceback
             from sys import stderr
