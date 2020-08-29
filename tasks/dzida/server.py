@@ -31,7 +31,7 @@ class ThreadedTCPRequestHandler(socketserver.StreamRequestHandler):
             interpreter = Interpreter()
             interpreter.parser.parse(code)
             for n in range(1, 11):
-                interpreter.stdin = StringIO(str(n))
+                interpreter.stdin = StringIO(str(n) + '\n')
                 interpreter.stdout = StringIO()
                 interpreter.execute()
                 if solve(n).strip() != interpreter.stdout.getvalue().strip():

@@ -282,7 +282,11 @@ class Interpreter:
             self.reg = 9
 
         elif instr == Instruction.INPUT_CHAR:
-            self.reg = ord(self.stdin.read(1))
+            c = self.stdin.read(1)
+            if len(c) == 0:
+                self.reg = -1
+            else:
+                self.reg = ord(c)
         elif instr == Instruction.OUTPUT_CHAR:
             c = chr(self.reg)
             self.stdout.write(c)
