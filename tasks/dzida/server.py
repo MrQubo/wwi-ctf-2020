@@ -14,6 +14,7 @@ class ThreadedTCPRequestHandler(socketserver.StreamRequestHandler):
     def handle(self):
         try:
             self.request.sendall(b'Gib me your code!\n')
+            self.request.sendall(b"Your code can't have more than 10^5 characters.\n")
             self.request.sendall(b"End the code with line ' -- CODE END --'.\n")
             code = []
             for line in self.rfile:
@@ -24,6 +25,9 @@ class ThreadedTCPRequestHandler(socketserver.StreamRequestHandler):
                     break
                 code.append(line)
             code = '\n'.join(code)
+            if len(code) > 100 * 1000:
+                self.request.sendall(b'Your code is too long!\n')
+                return
             interpreter = Interpreter()
             interpreter.parser.parse(code)
             for n in range(1, 11):
