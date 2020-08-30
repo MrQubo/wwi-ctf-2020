@@ -1,0 +1,1 @@
+CTF{strace_can_inject_too!}
