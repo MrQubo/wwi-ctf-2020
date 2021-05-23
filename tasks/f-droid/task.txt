@@ -1,0 +1,9 @@
+Name: F-Droid
+Category: easy
+Tags: forensics, apk
+
+The popular FOSS software repository for Android. Now featuring CTF flag.
+
+Hint: You don't need to launch the app.
+
+Author: Michel Le Bihan (mimi89999)

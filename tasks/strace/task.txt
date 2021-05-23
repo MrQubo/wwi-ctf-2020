@@ -1,0 +1,7 @@
+Name: Saunders-Roe SR.53
+Category: medium
+Tags: re, forensics
+
+I discovered this binary in my home directory and I think it's malware. I wonder what does it communicate with the command server?
+
+Authors: Michel Le Bihan (mimi89999) – Implementation, MrQubo – Implementation, Michał Radwański (enedil) – Story
