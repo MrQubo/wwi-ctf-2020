@@ -1,0 +1,9 @@
+Name: fileshare
+Category: medium
+Tags: misc
+
+Unprotected fileshare at `ctf.staszic.waw.pl`.
+
+You're allowed to use `nmap` on `ctf.staszic.waw.pl` for this task (There's no need to use `-p-` argument).
+
+Author: Michel Le Bihan (mimi89999)
